@@ -1,6 +1,6 @@
-let userWallet = document.getElementById('userWallet').innerHTML
+let userWallet = document.getElementById('userWallet')
 
 async function login(){
     let accounts = await ethereum.request({ method: 'eth_requestAccounts'})
-    userWallet = accounts[0]
+    userWallet.innerHTML = accounts[0]
 }
